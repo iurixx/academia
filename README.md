@@ -46,6 +46,15 @@ npx expo start
 › Press ? │ show all commands
 ```
 
+## Used Libs documentation
+
+Expo - [here](https://docs.expo.dev/)
+Lodash - [here](https://lodash.com/)
+React Translate - [here](https://react.i18next.com/getting-started)
+MUI Core - [here](https://mui.com/material-ui/getting-started/overview/)
+Tailwind - [here](https://tailwindcss.com/docs/installation)
+
+
 ## License
 
 [GNU GPL v3](https://choosealicense.com/licenses/gpl-3.0/)

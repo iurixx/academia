@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks",
+    "react-native"
+  ],
+
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": "off",
+    "import/no-anonymous-default-export": ["warn", {
+      "allowObject": true
+    }]
+  }
+}

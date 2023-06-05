@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@/*": ["./src/*"],
+      "@root/*": ["./*"],
+      "@notification/*": ["./src/modules/notification/*"],
+      "@favoriteButton/*": ["./src/modules/favoriteButton/*"]
+    }
+  },
+  "exclude": ["node_modules", ".expo", ".vscode"]
+}

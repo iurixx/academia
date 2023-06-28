@@ -34,32 +34,35 @@ sudo apt install node -y
 node install
 ```
 
+- For Android
+
+Install Android SDK, download it [here](https://developer.android.com/studio/index.html#downloads) - chose the "command options only"
+Unzip, open the unzipped folder and run the following command to run the SDK
+
+```bash
+bin/sdkmanager
+```
+
 ## Usage
 
 ```bash
-# to start the project
-npx expo start
-
-# to run the project use the expo controll pannel
-# it will be something like this:
-› Press a │ open Android
-› Press w │ open web
-
-› Press j │ open debugger
-› Press r │ reload app
-› Press m │ toggle menu
-
-› Press ? │ show all commands
+# to start the project with the command palete
+npm run start
+# to start the project for android
+npm run android
+# to start the project for ios
+npm run ios
+# to start the project for web
+npm run web
 ```
 
 ## Used Libs documentation
 
-Expo - [here](https://docs.expo.dev/)
-Lodash - [here](https://lodash.com/)
-React Translate - [here](https://react.i18next.com/getting-started)
-MUI Core - [here](https://mui.com/material-ui/getting-started/overview/)
-Tailwind - [here](https://tailwindcss.com/docs/installation)
-React Navigation - [here](https://reactnavigation.org/docs/getting-started/)
+- Expo - [here](https://docs.expo.dev/)
+- Lodash - [here](https://lodash.com/)
+- React Translate - [here](https://react.i18next.com/getting-started)
+- MUI Core - [here](https://mui.com/material-ui/getting-started/overview/)
+- React Navigation - [here](https://reactnavigation.org/docs/getting-started/)
 
 ## License
 

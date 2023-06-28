@@ -12,7 +12,7 @@ Install node:
 - Access the project page and run the node command to install the dependencies.
 
 ```bash
-node install
+npm install
 ```
 
 ### Linux
@@ -31,7 +31,7 @@ sudo apt install node -y
 - Access the project page and run the node command to install the dependencies.
 
 ```bash
-node install
+npm install
 ```
 
 - For Android

@@ -37,10 +37,36 @@ npm install
 - For Android
 
 Install Android SDK, download it [here](https://developer.android.com/studio/index.html#downloads) - chose the "command options only"
-Unzip, open the unzipped folder and run the following command to run the SDK
+Unzip, open the unzipped folder and run the following commands to install all dependencies and run the emulated device
+
+Install android sdk dependencies:
 
 ```bash
-bin/sdkmanager
+bin/sdkmanager --install "build-tools;34.0.0" "cmdline-tools;latest" "emulator" "extras;google;auto" "platform-tools" "platforms;android-34" "tools"
+```
+
+Install android image if your PC is Intel:
+
+```bash
+bin/sdkmanager --install "system-images;android-34;google_apis_playstore;x86_64"
+```
+
+Install android image if your PC is AMD:
+
+```bash
+bin/sdkmanager --install "system-images;android-34;google_apis_playstore;arm64-v8a"
+```
+
+Create virtual device (AVD):
+
+```bash
+bin/avdmanager create avd --force --name android-academia --abi google_apis_playstore/x86_64 --package 'system-images;android-34;google_apis_playstore;x86_64' --device "Nexus 6P"
+```
+
+Run the new avd created as a sandbox emulated device:
+
+```bash
+emulator @android-academia
 ```
 
 ## Usage

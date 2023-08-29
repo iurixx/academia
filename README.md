@@ -28,6 +28,8 @@ sudo dnf install node -y
 sudo apt install node -y
 ```
 
+## Configuration
+
 - Access the project page and run the node command to install the dependencies.
 
 ```bash
@@ -42,38 +44,54 @@ Unzip, open the unzipped folder and run the following commands to install all de
 Install android sdk dependencies:
 
 ```bash
-bin/sdkmanager --install "build-tools;34.0.0" "cmdline-tools;latest" "emulator" "extras;google;auto" "platform-tools" "platforms;android-34" "tools"
+sdkmanager --install "build-tools;34.0.0" "cmdline-tools;latest" "emulator" "extras;google;auto" "platform-tools" "platforms;android-34" "tools"
 ```
 
 Install android image if your PC is Intel:
 
 ```bash
-bin/sdkmanager --install "system-images;android-34;google_apis_playstore;x86_64"
+sdkmanager --install "system-images;android-34;google_apis_playstore;x86_64"
 ```
 
 Install android image if your PC is AMD:
 
 ```bash
-bin/sdkmanager --install "system-images;android-34;google_apis_playstore;arm64-v8a"
+sdkmanager --install "system-images;android-34;google_apis_playstore;arm64-v8a"
 ```
 
-Create virtual device (AVD):
+Create virtual device (AVD) for Intel:
 
 ```bash
-bin/avdmanager create avd --force --name android-academia --abi google_apis_playstore/x86_64 --package 'system-images;android-34;google_apis_playstore;x86_64' --device "Nexus 6P"
+avdmanager create avd --force --name android-academia --abi google_apis_playstore/x86_64 --package "system-images;android-34;google_apis_playstore;x86_64" --device "Nexus 6P"
+```
+
+Create virtual device (AVD) for AMD:
+
+```bash
+avdmanager create avd --force --name android-academia --abi google_apis_playstore/arm64-v8a --package "system-images;android-34;google_apis_playstore;arm64-v8a" --device "Nexus 6P"
 ```
 
 Run the new avd created as a sandbox emulated device:
 
 ```bash
-emulator @android-academia
+emulator @android-academia -no-location-ui -engine calssic -nocache
 ```
+
+After opening the emulator run the following command to install the expo app inside the AVD:
+
+```bash
+npm run start:online
+```
+
+When the command pallet opens press **A** to emulate on Android
 
 ## Usage
 
 ```bash
 # to start the project with the command palete
 npm run start
+# to start the project with the command palete on the online mode
+npm run start:online
 # to start the project for android
 npm run android
 # to start the project for ios
